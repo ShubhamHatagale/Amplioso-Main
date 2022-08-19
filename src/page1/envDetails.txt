@@ -1,0 +1,23 @@
+
+Master env-
+DB_HOST=localhost
+DB_USER=root
+DB_DATA=amplioso
+DB_PASS=Amplioso@001
+PORT=9000
+GMAIL_USER=conversantravikantm@gmail.com
+GMAIL_PASS=21conversant#ravikant
+
+http://208.109.14.182:5000/masters/company
+
+Gateway env-
+SECRETE=qweqweqwe
+DB_HOST=localhost
+DB_NAME=amplioso
+DB_USER=root
+DB_PASSWORD=Amplioso@001
+PORT=5000
+
+
+
+
