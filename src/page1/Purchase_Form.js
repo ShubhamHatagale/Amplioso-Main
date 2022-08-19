@@ -457,7 +457,7 @@ function PurchaseForm() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
 
     )
 }
