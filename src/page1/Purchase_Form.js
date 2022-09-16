@@ -121,7 +121,7 @@
 
 //         var config = {
 //             method: 'POST',
-//             url: `http://208.109.14.182:9000/masters/AmpliosoNew/companyAmpliosoNew`,
+//             url: `http://localhost:9000/masters/AmpliosoNew/companyAmpliosoNew`,
 //             headers: {
 //                 'Authorization': token,
 //                 'Content-Type': 'multipart/form-data'
@@ -274,7 +274,7 @@ function PurchaseForm() {
         myHeaders.append('Content-Type', 'multipart/form-data')
         myHeaders.append("Authorization", token);
         let res = await fetch(
-            `http://208.109.14.182:9000/masters/masters/employee`,
+            `http://localhost:9000/masters/masters/employee`,
             {
                 method: "get",
                 headers: myHeaders
@@ -354,7 +354,7 @@ function PurchaseForm() {
 
         var config = {
             method: 'POST',
-            url: `http://208.109.14.182:9000/masters/companyAmpliosoNew`,
+            url: `http://localhost:9000/masters/companyAmpliosoNew`,
             headers: {
                 // 'Authorization': token,
                 'Content-Type': 'multipart/form-data'

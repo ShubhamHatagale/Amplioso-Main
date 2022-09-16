@@ -89,7 +89,7 @@ export default function Pricing() {
             headers: myHeaders, 
             redirect: 'follow'
         }
-        fetch(`http://208.109.14.182:9000/masters/package`, requestOptions)
+        fetch(`http://localhost:9000/masters/package`, requestOptions)
             .then(res => res.json())
             .then(result => {
                 console.log(result.data)

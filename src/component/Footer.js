@@ -28,7 +28,7 @@ export default function Footer() {
             headers: myHeader,
             body: raw
         }
-        fetch(`http://208.109.14.182:9000/masters/GetDemo/sendEmail`, requestOptions)
+        fetch(`http://localhost:9000/masters/GetDemo/sendEmail`, requestOptions)
             .then(res => res.json())
             .then(result => {
                 if (result.massage != undefined) {

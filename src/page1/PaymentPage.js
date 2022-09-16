@@ -25,7 +25,7 @@ const PaymentPage = () => {
             headers: myHeaders,
             redirect: "follow"
         }
-        fetch(`http://208.109.14.182:9000/masters/paymt_sts/${updId}`, requestOptions)
+        fetch(`http://localhost:9000/masters/paymt_sts/${updId}`, requestOptions)
             .then((response) => response.json())
             .then((resData) => {
                 console.log(resData);
