@@ -12,6 +12,7 @@ export default function Footer() {
     const [paymentNoti, setpaymentNoti] = useState(false);
     const [notification, setnotification] = useState(" ");
     const sendMail = () => {
+        alert("h")
         if (email == "") {
             // setnotification("Please Enter The Email")
             // setpaymentNoti(true)
@@ -29,18 +30,29 @@ export default function Footer() {
             body: raw
         }
         fetch(`http://localhost:9000/masters/GetDemo/sendEmail`, requestOptions)
-            .then(res => res.json())
-            .then(result => {
-                if (result.massage != undefined) {
-                    setnotification("Request Sent Successfully")
+            .then(res => res.json()).then(result => {
+                console.log(result.status)
+                console.log(result.message)
+
+                if (result.status == 200) {
+                        setnotification("Request Sent Successfully")
+                        setpaymentNoti(true)
+                        setemail("")
+                }else{
+                    setnotification("! Error,Please Check Your EmailId")
                     setpaymentNoti(true)
                     setemail("")
-
-                } else {
-                    // setnotification("! " + result.errors[0].msg.replace("username", "email"))
-                    setnotification("Successfully Subscribed")
-                    setpaymentNoti(true)
                 }
+
+                // if (result.massage != undefined) {
+                //     setnotification("Request Sent Successfully")
+                //     setpaymentNoti(true)
+                //     setemail("")
+                // } else {
+                //     // setnotification("! " + result.errors[0].msg.replace("username", "email"))
+                //     setnotification("Successfully Subscribed")
+                //     setpaymentNoti(true)
+                // }
             })
     }
 

@@ -30,8 +30,6 @@ export default function Home() {
     const [notification, setnotification] = useState(" ");
 
     const sendMail = (a) => {
-
-        console.log(a);
         var notif;
         if (email == "") {
             // setnotification("Please Enter The Email")
@@ -54,16 +52,25 @@ export default function Home() {
             .then(res => res.json())
             .then(result => {
                 console.log(result)
-                if (result.massage != undefined) {
+                if (result.status == 200) {
                     setnotification("Request Sent Successfully")
                     setpaymentNoti(true)
                     setemail("")
-
                 } else {
-                    // setnotification("! " + result.errors[0].msg.replace("username", "email"))
-                    setnotification("Please Enter The Valid Email")
+                    setnotification("! Error,Please Check Your EmailId")
                     setpaymentNoti(true)
+                    setemail("")
                 }
+                // if (result.massage != undefined) {
+                //     setnotification("Request Sent Successfully")
+                //     setpaymentNoti(true)
+                //     setemail("")
+
+                // } else {
+                //     // setnotification("! " + result.errors[0].msg.replace("username", "email"))
+                //     setnotification("Please Enter The Valid Email")
+                //     setpaymentNoti(true)
+                // }
 
 
                 // if (!result.errors.length) {
