@@ -67,7 +67,7 @@ const PaymentPage = () => {
                 {/* <Modal.Body className="success text-center">{`Payment Successfull`}</Modal.Body> */}
 
                 <Modal.Body className="success text-center">{notification}</Modal.Body>
-                <Modal.Body className="success text-center" ><Link to="/pricing" >Ok</Link></Modal.Body>
+                <Modal.Body className="success text-center" ><Link to="/ThankYou" >Ok</Link></Modal.Body>
 
             </Modal>
 

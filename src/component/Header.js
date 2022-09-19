@@ -4,7 +4,7 @@ import { HashRouter as Router, Link, useLocation } from 'react-router-dom';
 import HeadLogo from '../img/logo.png'
 import * as FaIcons from 'react-icons/fa'
 
-export default function Header() {
+export default function Header(props) {
 
     const [sidebar, setSidebar] = useState(false)
 
@@ -57,9 +57,13 @@ export default function Header() {
 
 
                 <ul className="nav-menu-items" onClick={showSidebar}>
-                    <li className="navbar-toggle">
+                    {/* <li className="">
+                        <FaIcons.FaUserCircle style={{fontSize:"44px",margin:"5px"}} className="user-circle" />
+                        <Link to="/sign_in"><span style={{ fontSize: "20px",fontWeight:"bolder" }}>Sign In</span></Link>
+                    </li> */}
+                    <li className="navbar-toggle close-btn" >
                         <Link to="#" className="menu-bars">
-                            <FaIcons.FaTimes className="close-btn" />
+                            <FaIcons.FaTimes />
                         </Link>
                     </li>
                     <br />
@@ -68,6 +72,18 @@ export default function Header() {
                     {/* <ul className="mobile-nav-links-con"> */}
                     <li className="mob-links-btns1">
                     </li>
+                    <li className="sign_in_block">
+                        {/* <FaIcons.FaUserCircle style={{fontSize:"44px",margin:"5px"}} className="user-circle" /> */}
+
+                        <Link to="/sign_in">
+                            <span className='loginHamburger'>Login</span>
+                            <FaIcons.FaSignInAlt className='signInArrow' />
+
+                        </Link>
+
+
+                    </li>
+
                     <li className="mob-links-btns">
                         <Link to="/about"><span>About</span></Link>
                     </li>
@@ -105,6 +121,7 @@ export default function Header() {
 
 
             </nav>
+            <div>{props.data}</div>
 
         </section>
 

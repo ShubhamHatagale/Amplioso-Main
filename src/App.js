@@ -17,6 +17,7 @@ import Footer from './component/Footer';
 import Purchase_Form from './page1/Purchase_Form';
 import Payment_Page from './page1/PaymentPage';
 import SignIn from './page1/SignIn';
+import ThankYou from './page1/ThankYou';
 
 function App() {
 
@@ -32,32 +33,36 @@ function App() {
       <Router>
 
 
-        <Header />
+        {/* <Header /> */}
 
 
 
         <Switch>
-          <Route exact path="/">  <Home /> </Route>
+          <Route exact path="/">
+            <Header data={<Home />} />
+          </Route>
 
-          <Route exact path="/about">  <About /> </Route>
+          <Route exact path="/about">  <Header data={<About />} /> </Route>
 
-          <Route exact path="/blog">  <Blog /> </Route>
+          <Route exact path="/blog">  <Header data={<Blog />} /> </Route>
 
-          <Route exact path="/contact">  <Contact /> </Route>
+          <Route exact path="/contact">  <Header data={<Contact />} /> </Route>
 
-          <Route exact path="/pricing">  <Pricing /> </Route>
+          <Route exact path="/pricing">  <Header data={<Pricing />} /> </Route>
 
-          <Route exact path="/faq">  <FAQ /> </Route>
+          <Route exact path="/faq">  <Header data={<FAQ />} /> </Route>
 
-          <Route exact path="/terms">  <Terms /> </Route>
+          <Route exact path="/terms">  <Header data={<Terms />} /> </Route>
 
-          <Route exact path="/policy">  <Policy /> </Route>
+          <Route exact path="/policy">  <Header data={<Policy />} /> </Route>
 
           <Route exact path="/Purchase_Form">  <Purchase_Form /> </Route>
 
           <Route exact path="/Payment_Page">  <Payment_Page /> </Route>
 
-          <Route exact path="/sign_in">  <SignIn /> </Route>
+          <Route exact path="/sign_in">  <Header data={<SignIn />} /> </Route>
+
+          <Route exact path="/ThankYou">  <ThankYou /> </Route>
 
           {/* <Route exact path="/purchaseForm">  <PurchaseForm /> </Route> */}
 

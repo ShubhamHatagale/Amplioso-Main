@@ -122,7 +122,7 @@ export default function Footer() {
                 </div>
                 <div className="right-grid">
                     <p>	&copy; amplioso {new Date().getFullYear()}. All rights Reserved.</p>
-                    <p>Designed and Developed by Conversant Technologies</p>
+                    <p>Powered by Conversant Technologies</p>
 
                 </div>
                 <div>

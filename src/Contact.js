@@ -18,26 +18,26 @@ import { FadeInDown, FadeInText, FadeInUp, FadeInImg, FadeInUpBtn, FadeInRight, 
 
 export default function Contact() {
     return (
-        
-       <section>
 
-<div className="section">
-        <div>
-           
-            <div className="contact-full-wrapper">
-            
-            <section className="wrapper-1-contact">
-                    {/* <div>
+        <section>
+
+            <div className="section">
+                <div>
+
+                    <div className="contact-full-wrapper">
+
+                        <section className="wrapper-1-contact">
+                            {/* <div>
                     <img src={ContactImg} />
                 </div> */}
-                <div className="contact-img">
-                    <FadeInFullLeft>
-                    <img src={ContactImg} align="middle" />
-                    </FadeInFullLeft>
+                            <div className="contact-img">
+                                <FadeInFullLeft>
+                                    <img src={ContactImg} align="middle" />
+                                </FadeInFullLeft>
 
-                    
-                </div>
-                {/* <div className="contact-title-conatiner3">
+
+                            </div>
+                            {/* <div className="contact-title-conatiner3">
                         <h4> 
                         Contact Us
                         </h4>
@@ -47,113 +47,113 @@ export default function Contact() {
                         
 
                         </div> */}
-                        <div>
-                        
+                            <div>
+
                             </div>
                             <FadeInUpBtn>
-                    <div className="how-it-ul-contact">
-                        <ul>
-                            <li>
-                                <div className="contact-svg-container">
-                            <FaIcons.FaLocationArrow /> 
-                            </div>
-                            <div>
-                                </div>
-                            <div>
-                           <p>Address</p><span>
-                            Amploso, HQ 24 Fifth st, Los Angeles, USA</span>
-                            </div>
-                            </li>
-                       
-                            <li>
-                            <div className="contact-svg-container">
-                            <FaIcons.FaPhone />
-                            </div>
-                            <div>
-                                </div>
-                            <div>
-                            <p>Call Us On</p>
-                            <span>
-                        
-                            Phone : +145 (03) 456 0000 <br/> Support : +145 (03) 456 0000
-                            </span>
-                            </div>
-                            </li>
-                            <li>
-                            <div className="contact-svg-container">
-                            <FaIcons.FaEnvelopeOpen />
-                            </div>
-                            <div>
-                                </div>
-                            <div>
-                                <p>Email Us</p>
-                                <span>
-                      
-                            support@amplioso.com</span>
-                            </div>
-                            </li>
-                        </ul>
-                    </div>
-                    </FadeInUpBtn>
-               
+                                <div className="how-it-ul-contact">
+                                    <ul>
+                                        {/* <li>
+                                            <div className="contact-svg-container">
+                                                <FaIcons.FaLocationArrow />
+                                            </div>
+                                            <div>
+                                            </div>
+                                            <div>
+                                                <p>Address</p><span>
+                                                    Amploso, HQ 24 Fifth st, Los Angeles, USA</span>
+                                            </div>
+                                        </li> */}
 
-                </section>
-                <section className="wrapper-2-contact">
-                    <div className="form-div">
-                        <FadeInUp>
-                       <form>
-                           <div>
-                               <h4>Get In Touch</h4>
-                               <p>Have an inquiry or some feedback for us? <br/> Fill out the form below to contact our team.</p>
-                           <div className="input-text-div">
-                              
-                               <div>
-                                   <input type="text" placeholder="Company Name" />
-                                   <input type="text" placeholder="Contact Person" />
+                                        <li>
+                                            <div className="contact-svg-container">
+                                                <FaIcons.FaPhone />
+                                            </div>
+                                            <div>
+                                            </div>
+                                            <div>
+                                                <p>Call Us On</p>
+                                                <span>
+
+                                                    Phone : +145 (03) 456 0000 <br /> Support : +145 (03) 456 0000
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="contact-svg-container">
+                                                <FaIcons.FaEnvelopeOpen />
+                                            </div>
+                                            <div>
+                                            </div>
+                                            <div>
+                                                <p>Email Us</p>
+                                                <span>
+
+                                                    support@amplioso.com</span>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div>
-                                   <input type="text" placeholder="E-mail" />
-                                   <input type="text" placeholder="Contact No." />
-                                </div>
-                                <div>
-                                    <textarea placeholder="Message" ></textarea>
-                                </div>   
-                                </div>
-                                {/* <div>
+                            </FadeInUpBtn>
+
+
+                        </section>
+                        <section className="wrapper-2-contact">
+                            <div className="form-div">
+                                <FadeInUp>
+                                    <form>
+                                        <div>
+                                            <h4>Get In Touch</h4>
+                                            <p>Have an inquiry or some feedback for us? <br /> Fill out the form below to contact our team.</p>
+                                            <div className="input-text-div">
+
+                                                <div>
+                                                    <input type="text" placeholder="Company Name" />
+                                                    <input type="text" placeholder="Contact Person" />
+                                                </div>
+                                                <div>
+                                                    <input type="text" placeholder="E-mail" />
+                                                    <input type="text" placeholder="Contact No." />
+                                                </div>
+                                                <div>
+                                                    <textarea placeholder="Message" ></textarea>
+                                                </div>
+                                            </div>
+                                            {/* <div>
                                     <button>Submit</button>
                                 </div> */}
-                                <div className="contact-btn--container">
-                            <button>Submit</button>
-                        </div>
-                         
-                           </div>
-                       </form>
-                       </FadeInUp>
+                                            <div className="contact-btn--container">
+                                                <button>Submit</button>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </FadeInUp>
+                            </div>
+                        </section>
                     </div>
-                </section>
-            </div>
-            </div>
+                </div>
             </div>
 
-      
-            
+
+
             <div>
                 <Footerext />
             </div>
 
-            
 
-            
-            
-            
 
-          
 
-      
 
-            </section> 
-       
-   
+
+
+
+
+
+
+        </section>
+
+
 
     )
 

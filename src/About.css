@@ -1,6 +1,6 @@
 .about-wrapper {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -10,27 +10,32 @@
 
 .aboutab-wrapper-1 {
     height: 100vh;
-    width: 50%;  
+    width: 50%;
     justify-content: center;
     display: flex;
-    align-items: center;                /* <flex-grow> <flex-shrink> <flex-basis> */             /* a bit of space between the centered items */
+    align-items: center;
+    /* <flex-grow> <flex-shrink> <flex-basis> */
+    /* a bit of space between the centered items */
 
 }
 
 
 .wrapper-2 {
     height: 100vh;
-    width: 50%;   
-    overflow-y: hidden;           /* a bit of space between the centered items */
+    width: 50%;
+    overflow-y: hidden;
+    /* a bit of space between the centered items */
 
 }
 
 .wrapper-1-about {
     height: 100vh;
-    width: 50%;  
+    width: 50%;
 
     display: flex;
-    align-items: center;                /* <flex-grow> <flex-shrink> <flex-basis> */             /* a bit of space between the centered items */
+    align-items: center;
+    /* <flex-grow> <flex-shrink> <flex-basis> */
+    /* a bit of space between the centered items */
 
 
 
@@ -38,20 +43,21 @@
 
 .wrapper-2-about {
     height: 100vh;
-    width: 50%;   
-    overflow-y: hidden;           /* a bit of space between the centered items */
+    width: 50%;
+    overflow-y: hidden;
+    /* a bit of space between the centered items */
 
 }
 
 .left-flex-container {
-     display: flex;
-     flex-direction: column;
-     width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 
 .about-title-conatiner {
-    
+
     justify-content: end;
     display: flex;
     margin: 0px 50px;
@@ -74,7 +80,7 @@
 }
 
 .about-title-conatiner3 {
-    
+
     justify-content: end;
     display: flex;
     margin: 0px 30px;
@@ -91,12 +97,12 @@
 
 
 .about-title-conatiner4 {
-    
+
     justify-content: center;
     display: flex;
     margin: 100px 30px 0px 30px;
     flex-direction: column;
-   
+
 }
 
 .about-title-conatiner4 h4 {
@@ -107,7 +113,7 @@
 }
 
 .about-title-conatiner5 {
-    
+
     text-align: center;
     display: flex;
     margin: 10px 30px 0px 30px;
@@ -148,7 +154,7 @@
 
     justify-content: center;
     align-items: center;
- 
+
     width: 100%;
 }
 
@@ -160,20 +166,23 @@
     background-attachment: fixed;
     background-position: center; */
     /* height: 100vh; */
-    width: 100%;  
+    width: 100%;
     /* justify-content: center;
     display: flex; */
     /* align-items: center;   */
-       /* <flex-grow> <flex-shrink> <flex-basis> */             /* a bit of space between the centered items */
+    /* <flex-grow> <flex-shrink> <flex-basis> */
+    /* a bit of space between the centered items */
 
 }
 
 .blog-wrapper-1 {
     height: 45vh;
-    width: 100%;  
+    width: 100%;
     justify-content: end;
     display: flex;
-    align-items: flex-end;                /* <flex-grow> <flex-shrink> <flex-basis> */             /* a bit of space between the centered items */
+    align-items: flex-end;
+    /* <flex-grow> <flex-shrink> <flex-basis> */
+    /* a bit of space between the centered items */
 
 }
 
@@ -188,7 +197,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-   
+
 }
 
 /* .blog-title {
@@ -205,6 +214,7 @@
     font-size: 1.5rem;
     margin: 20px;
     text-transform: capitalize;
+    font-weight: bolder;
 }
 
 .blog-boxes-row a {
@@ -225,6 +235,7 @@
     background: #fff;
     /* box-shadow: 2px 0px 2px #f1f1f1; */
 }
+
 .blog-boxes-row div img {
     height: 250px;
 }
@@ -260,9 +271,9 @@
 
 
 
-.abt-img{
+.abt-img {
     height: 100vh;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .abt-img img {
@@ -272,9 +283,9 @@
 }
 
 
-.abt-img2{
+.abt-img2 {
     height: 100vh;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .abt-img2 img {
@@ -294,9 +305,9 @@
     z-index: -10;
 }
 
-.abt-img3{
+.abt-img3 {
     height: 100vh;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .abt-img3 img {
@@ -319,10 +330,12 @@
 
 .about-wrapper-1 {
     height: 40vh;
-    width: 100%;  
+    width: 100%;
     justify-content: center;
     display: flex;
-    align-items: center;                /* <flex-grow> <flex-shrink> <flex-basis> */             /* a bit of space between the centered items */
+    align-items: center;
+    /* <flex-grow> <flex-shrink> <flex-basis> */
+    /* a bit of space between the centered items */
 
 }
 
@@ -381,7 +394,7 @@
     font-size: 18px;
     font-weight: 500;
     color: #000;
-  
+
 }
 
 .how-it-ul li p {
@@ -408,6 +421,7 @@
     align-items: center;
 
 }
+
 .how-it-ul-conatct svg {
     width: 20px;
     margin: 0px 10px;
@@ -452,12 +466,13 @@
 
 .about-wrapper-2 {
     height: 60vh;
-    width: 100%;  
+    width: 100%;
     justify-content: center;
     display: flex;
     position: relative;
     /* align-items: center;   */
-       /* <flex-grow> <flex-shrink> <flex-basis> */             /* a bit of space between the centered items */
+    /* <flex-grow> <flex-shrink> <flex-basis> */
+    /* a bit of space between the centered items */
 
 }
 
@@ -584,6 +599,7 @@
 .about-grid-wrapper {
     padding: 10px 100px;
 }
+
 /* 
 .req-demo {
     width: 100%;
@@ -687,7 +703,8 @@
     background: transparent;
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus {
     outline: none;
 }
 
@@ -721,13 +738,11 @@ input:focus, textarea:focus{
     width: 50%;
     margin: 20px;
 } */
-.home-wrapper img{
-
-}
+.home-wrapper img {}
 
 .contact-full-wrapper {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -756,9 +771,7 @@ input:focus, textarea:focus{
     text-transform: uppercase;
 }
 
-.contact-img img {
-    
-}
+.contact-img img {}
 
 .how-it-ul-contact {
     margin-top: 80px;
@@ -780,7 +793,7 @@ input:focus, textarea:focus{
     overflow-y: hidden;
 }
 
-.wrapper-1-contact img{
+.wrapper-1-contact img {
     height: 80vh;
     width: 100%;
     overflow-y: hidden;
@@ -790,8 +803,8 @@ input:focus, textarea:focus{
     height: 90vh;
     width: 40%;
     overflow-y: hidden;
-   
-    
+
+
 }
 
 .contact-btn--container {
@@ -815,7 +828,7 @@ input:focus, textarea:focus{
 }
 
 .contact-title-conatiner3 {
-    
+
     justify-content: end;
     display: flex;
     margin: 0px 30px;
@@ -865,7 +878,7 @@ input:focus, textarea:focus{
 }
 
 .pricing-title-conatiner3 {
-    
+
     justify-content: end;
     display: flex;
     margin: 0px 0px;
@@ -886,7 +899,7 @@ input:focus, textarea:focus{
 
 .pricing-wrapper {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -899,7 +912,7 @@ input:focus, textarea:focus{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 50px 0px; 
+    margin: 50px 0px;
     overflow: hidden;
 }
 
@@ -924,26 +937,26 @@ input:focus, textarea:focus{
     overflow: hidden;
     width: 100%;
     position: relative;
-    background-color: #e52145f7;
+    /* background-color: #e52145f7; */
 }
 
 
 .price-div h4 {
     font-size: 3rem;
     margin-top: 100px;
-    
+
 }
 
 
 
-.over-flow-price h5{
+.over-flow-price h5 {
     font-size: 1.3rem;
     text-align: left;
     font-weight: 500;
     margin: 100px 100px 50px 100px;
 }
 
-.over-flow-price h6{
+.over-flow-price h6 {
     font-size: 1.2rem;
     text-align: left;
     font-weight: 500;
@@ -986,8 +999,8 @@ input:focus, textarea:focus{
     font-size: 1rem;
 }
 
-.price-box button{
-    padding: 10px 30px;
+.price-box button {
+    padding: 10px 30px; 
     margin: 0px 10px;
     text-align: center;
     background: crimson;
@@ -998,11 +1011,25 @@ input:focus, textarea:focus{
     width: 90%;
     color: #fff;
     cursor: pointer;
-  
+
 
 }
 
-.price-box button:hover{
+.purchase_button {
+    padding: 10px 30px; 
+    margin: 0px 10px;
+    text-align: center;
+    background: crimson;
+    border: 2px solid crimson;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 20%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.price-box button:hover {
 
     background: #fff;
     color: red;
@@ -1024,7 +1051,7 @@ input:focus, textarea:focus{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 50px 0px; 
+    margin: 50px 0px;
     overflow: hidden;
 }
 
@@ -1041,7 +1068,7 @@ input:focus, textarea:focus{
     text-align: left;
     width: 30%;
 
-    
+
 }
 
 .benifits-box div {
@@ -1050,11 +1077,13 @@ input:focus, textarea:focus{
     justify-content: center;
     align-items: center;
 }
+
 .benifits-box div p {
     font-size: 1.2rem;
     font-weight: 500;
     margin: 0px 0px 0px 30px;
 }
+
 .benifits-box img {
     height: 70px;
 }
@@ -1064,18 +1093,23 @@ input:focus, textarea:focus{
     margin: 100px 0px;
     width: 100%;
     overflow-y: hidden;
-    
+
 }
 
 .faq-collaps-conatiner {
     font-size: 1.3rem;
     font-weight: 400;
-    background: #21558F;
+    /* background: #21558F; */
+    /* background: #e52145f7;
+    color: #fff;  */
+    background: #e1d6d6f7;
+
+    /* background: #fffffff7; */
+    color: rgb(0, 0, 0);
     padding: 20px 5px 20px 5px;
     text-align: left;
-    color: #fff; 
     margin: 10px;
-   
+
 }
 
 .faq-collaps-conatiner span {
@@ -1129,7 +1163,7 @@ input:focus, textarea:focus{
 }
 
 .faq-title-conatiner3 {
-    
+
     justify-content: end;
     display: flex;
     margin: 0px 0px;
@@ -1197,11 +1231,14 @@ input:focus, textarea:focus{
 .policy-content div h3 {
     font-size: 2rem;
     margin: 20px 0px;
+    color: #000;
+    font-weight: bold;
 }
 
 .policy-content div p {
     font-size: 1.1rem;
     line-height: 1.5;
+    color: #000;
 }
 
 
@@ -1211,6 +1248,7 @@ input:focus, textarea:focus{
         flex-direction: column;
         flex-wrap: nowrap;
     }
+
     .about-title-conatiner h4 {
         font-size: 2rem;
         z-index: 100;
@@ -1220,50 +1258,63 @@ input:focus, textarea:focus{
         height: auto;
         margin-top: 80px;
     }
+
     .aboutab-wrapper-1 {
         height: 40vh;
         justify-content: end;
         width: 100%;
     }
+
     .wrapper-2 {
         height: 60vh;
         width: 100%;
     }
+
     .abt-img img {
         height: 60vh;
         top: 50px;
     }
+
     .abt-img {
         height: auto;
     }
+
     .abt-img2 {
         display: none;
     }
+
     .wrapper-1-about {
         height: 0vh;
     }
+
     .wrapper-2-about {
         width: 100%;
     }
+
     .about-title-conatiner3 h4 {
         font-size: 2rem;
     }
+
     .about-title-conatiner3 {
         justify-content: end;
         height: 30vh;
     }
+
     .how-it-ul ul li {
         margin: 30px 30px;
         z-index: 100;
     }
+
     .abt-img3 {
         display: none;
     }
+
     .about-title-conatiner5 {
         margin: 0px 20px 0px 20px;
         justify-content: center;
         height: 40vh;
     }
+
     .about-title-conatiner5 h4 {
         font-size: 1.5rem;
     }
@@ -1271,37 +1322,47 @@ input:focus, textarea:focus{
     .about-title-conatiner5 p {
         margin-top: 20px;
     }
+
     .abdo-text p {
         font-size: 0.9rem;
     }
+
     .about-flex-cont p {
         display: none;
     }
+
     .abdo-text span {
         font-size: 0.9rem;
     }
+
     .about-title-conatiner2 {
         margin: 0px 50px;
     }
+
     .about-wrapper-2 img {
         height: 70vh;
-        width:auto;
-       
+        width: auto;
+
     }
+
     .about-wrapper-1 {
         height: 30vh;
         align-items: flex-end;
     }
+
     .about-wrapper-2 {
         height: 70vh;
         padding-top: 30px;
     }
+
     .about-flex-cont {
         margin-bottom: 30px;
     }
+
     .blog-wrapper-2 {
         width: 100%;
     }
+
     .how-it-ul2 {
         margin: 30px 25px;
         width: 100%;
@@ -1313,73 +1374,94 @@ input:focus, textarea:focus{
         height: auto;
         margin-top: 00px;
     }
+
     .wrapper-2-contact {
         width: 100%;
         height: auto;
 
     }
+
     .contact-title-conatiner3 h4 {
         font-size: 2.5rem;
     }
+
     .contact-title-conatiner3 {
         height: auto;
     }
+
     .form-div {
         height: auto;
         padding: 30px;
     }
+
     .form-div h4 {
         margin-top: 50px;
         font-size: 2rem;
     }
+
     .input-text-div div {
         flex-direction: column;
-        margin: 20px 0px; 
+        margin: 20px 0px;
     }
+
     .form-div input {
         width: 100%;
         margin: 20px 0px;
     }
+
     .how-it-ul {
         margin-bottom: 50px;
     }
+
     .contact-btn--container {
         position: relative;
         height: 7vh;
-        
+
     }
+
     .form-div textarea {
         height: 100px;
     }
+
     .contact-btn--container button {
         font-size: 1.2rem;
     }
+
     .pricing-title-conatiner3 h4 {
         font-size: 3rem;
         padding-bottom: 10px;
     }
-    .line2{
+
+    .line2 {
         margin-bottom: 50px;
         height: 5px;
         width: 100px;
     }
+
     .price-div h4 {
         font-size: 2rem;
         margin: 50px 10px 10px 10px;
     }
+
     .price-div p {
         font-size: 1rem;
         margin: 5px 10px 10px 10px;
     }
+
     .price-box {
         width: 80%;
     }
+
+    
+
     .price-box h4 {
         margin: 0px;
     }
+
     .benifiting-boxes {
         flex-direction: column;
     }
+
     .benifits-box {
         width: 80%;
     }
@@ -1387,6 +1469,7 @@ input:focus, textarea:focus{
     .about-title-conatiner4 {
         height: auto;
     }
+
     .about-title-conatiner4 h4 {
         font-size: 1.5rem;
     }
@@ -1394,98 +1477,123 @@ input:focus, textarea:focus{
     .about-title-conatiner p {
         display: none;
     }
+
     .about-title-conatiner23 h4 {
         font-size: 2.5rem;
     }
+
     .abdo-text {
         width: 90%;
         margin-bottom: 0px;
         overflow-y: hidden;
     }
+
     .about-title-conatiner23 {
         margin: 0px 40px;
     }
+
     .blog-wrapper-1 {
         height: 40vh;
         width: 90%;
         justify-content: end;
     }
+
     .blog-title-conatiner2 {
         height: auto;
         margin: 0px;
         width: 100%;
     }
+
     .blg-img-bak-home2 {
         width: 30vw;
     }
+
     .wrapper-1-contact img {
         width: 95%;
         height: 40vh;
     }
+
     .contact-img {
         height: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .how-it-ul-contact ul {
         flex-direction: column;
         margin-top: 50px !important;
         margin: 0px 0px;
     }
+
     .how-it-ul-contact ul li {
         margin: 15px 1px;
     }
+
     .how-it-ul-contact {
         margin-left: 20px;
         margin-right: 20px;
     }
+
     .blog-title-conatiner2 h4 {
         font-size: 3rem;
     }
+
     .how-it-ul2 ul li {
         font-size: 15px;
         display: flex;
     }
+
     .how-it-ul2 ul li svg {
         margin: 5px;
     }
+
     .faq-title-conatiner3 h4 {
         font-size: 2rem;
     }
+
     .faq-boxes {
         margin: 20px 10px;
     }
+
     .faq-collaps-conatiner {
         font-size: 1.2rem;
         text-align: center;
     }
+
     .faq-collaps-conatiner span {
         padding-left: 5px;
         padding-right: 5px;
     }
+
     .how-it-ul-faq ul li {
         margin: 10px 0px;
         text-align: left;
         grid-template-columns: 40px 85%;
     }
+
     .pricing-title-conatiner3 {
         margin-bottom: 0px;
     }
+
     .over-flow-price h5 {
         margin: 100px 10px 20px 20px;
     }
+
     .over-flow-price h6 {
         margin: 30px 10px 20px 20px;
     }
+
     .how-it-ul-policy ul li {
         grid-template-columns: 40px 85%;
     }
+
     .policy-content div h3 {
         font-size: 1.5rem;
         margin: 20px 10px;
     }
+
     .blog-boxes-row div {
         width: 100%;
     }
- }
+}

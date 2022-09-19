@@ -50,7 +50,7 @@ export default function Footerext() {
                 </div>
                 <div className="right-grid">
                     <p>	&copy; amplioso 2021. All rights Reserved.</p>
-                    <p>Designed and Developed by Conversant Technologies</p>
+                    <p>Powered by Conversant Technologies</p>
                    
                 </div>
                 <div>

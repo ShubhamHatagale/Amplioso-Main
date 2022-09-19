@@ -159,7 +159,7 @@ export default function Home() {
                                     <div className="home-wrapper">
                                         <section className="video-wrapper-1">
                                             <div className="left-flex-container">
-                                                <div className="title-conatiner">
+                                                <div className="title-conatiner title-conatiner-para">
                                                     <h4 ref={firstText}>
                                                         360-degree feedback for your human capital
                                                         that is simple, actionable and performance enhancing
@@ -177,21 +177,21 @@ export default function Home() {
                                                     </video>
 
 
-                                                    <div className="signbutton-conatiner" ref={myContainer}>
+                                                    {/* <div className="signbutton-conatiner" ref={myContainer}>
                                                         <button onClick={() => history.push("/sign_in")}>sign in</button>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                         </section>
+
                                         <section className="video-wrapper-2">
                                             <div ref={myContainer}>
-
                                                 <video autoPlay loop muted id="video">
                                                     <source src={Sidevideo} type='video/mp4' />
                                                 </video>
-
                                             </div>
                                         </section>
+
                                     </div>
                                 </div>
                             </div>

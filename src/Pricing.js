@@ -19,9 +19,11 @@ import * as FaIcons from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import { FadeInDown, FadeInText, FadeInUp, FadeInImg, FadeInUpBtn, FadeInRight, FadeInLeft, FadeInUpImg, FadeInFullLeft } from './Animation.js'
 import { gsap } from 'gsap';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Pricing() {
 
+    const history = useHistory()
 
     const purchase = (a, b) => {
         console.log("a")
@@ -69,16 +71,46 @@ export default function Pricing() {
     ])
 
     const [packages, setPackages] = useState();
+    const [PackageId, setPackageId] = useState([]);
 
 
 
     useEffect(() => {
-        console.log = function() {}
+        // console.log = function () { }
 
         console.log(Features)
         GetPackageData();
     }, [])
 
+
+    const radioFn = (e) => {
+        var id = e.target.value;
+        console.log(JSON.stringify(e.target.value))
+        // setPackageId(id)
+
+        console.log("yes")
+        var myHeaders = new Headers();
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        }
+        fetch(`http://localhost:9000/masters/package/${id}`, requestOptions)
+            .then(res => res.json())
+            .then(result => {
+                console.log(result.data)
+                setPackageId(result.data)
+            })
+
+    }
+
+    const submitToNext = () => {
+        console.log(PackageId)
+        history.push({
+            pathname: '/Purchase_Form',
+            state: PackageId
+        })
+    }
 
     const GetPackageData = () => {
 
@@ -86,7 +118,7 @@ export default function Pricing() {
         var myHeaders = new Headers();
         var requestOptions = {
             method: 'GET',
-            headers: myHeaders, 
+            headers: myHeaders,
             redirect: 'follow'
         }
         fetch(`http://localhost:9000/masters/package`, requestOptions)
@@ -170,8 +202,12 @@ export default function Pricing() {
                                                                         <h5>Only US {item.price}</h5>
                                                                     </div>
                                                                     <br />
-                                                                    <div>
-                                                                        {/* <button onClick={() => purchase(`0-10`, 499)}>Purchase</button> */}
+                                                                    <div class="form-check " style={{ marginLeft: "40%" }}>
+                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" value={item.id} id="flexRadioDefault1" onChange={radioFn} />
+                                                                    </div>
+
+                                                                    {/* <div>
+
                                                                         <Link
                                                                             className='button'
                                                                             to={{
@@ -183,7 +219,7 @@ export default function Pricing() {
                                                                             <button>Purchase</button>
                                                                         </Link>
 
-                                                                    </div>
+                                                                    </div> */}
 
                                                                 </div>
                                                             </FadeInUp>
@@ -195,7 +231,20 @@ export default function Pricing() {
 
                                                 </div>
 
+                                                <div>
 
+                                                    {/* <Link
+
+                                                        to={{
+                                                            pathname: "/Purchase_Form",
+                                                            state: { Data: PackageId }
+                                                        }}
+
+                                                    > */}
+                                                    <button className='purchase_button' onClick={submitToNext}>Purchase</button>
+                                                    {/* </Link> */}
+
+                                                </div>
 
                                             </div>
                                         </section>
