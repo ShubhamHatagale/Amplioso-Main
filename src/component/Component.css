@@ -165,7 +165,7 @@ FaIcons {
 .signInArrow {
     /* style={{ fontSize: "smaller",color:"#e52145f7" }} */
     font-size: smaller;
-    color: #e52145f7;
+    /* color: #e52145f7; */
 }
 
 .signInArrow:hover {
@@ -178,7 +178,7 @@ FaIcons {
     font-weight: bolder;
     text-decoration: underline #e52145f7 5px 40px;
     margin-right: 8px;
-    color: black;
+    /* color: black; */
 }
 
 .loginHamburger:hover {

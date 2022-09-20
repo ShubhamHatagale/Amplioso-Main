@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './About.css'
 import Header from './component/Header'
 import Sidevideo from './img/video.mp4'
@@ -15,11 +15,114 @@ import Testominals from './component/Testominals';
 import * as FaIcons from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import { FadeInDown, FadeInText, FadeInUp, FadeInImg, FadeInUpBtn, FadeInRight, FadeInLeft, FadeInUpImg, FadeInFullLeft } from './Animation.js'
+import { Modal } from 'react-bootstrap';
+import Ico12 from '.././src/img/ico12.png';
 
 export default function Contact() {
+    const [inputField, setinputField] = useState({
+        company: '',
+        person: '',
+        email: '',
+        contact: '',
+        message: '',
+    });
+
+
+    const [Error, setError] = useState('')
+    const [email, setemail] = useState()
+    // const myHeader = useRef(null);
+    const [paymentNoti, setpaymentNoti] = useState(false);
+    const [notification, setnotification] = useState(" ");
+
+
+    const handleChangeInput = (e) => {
+        console.log(e.target.name)
+        // let name=e.target.name;
+        setinputField({ ...inputField, [e.target.name]: e.target.value })
+        console.log(inputField)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        if (inputField.company == "" && inputField.person == "" && inputField.email == "" && inputField.contact == "" && inputField.message == "") {
+            setError("please fill all fields")
+        } else if (inputField.company == "") {
+            setError("please enter company name")
+        } else if (inputField.person == "") {
+            setError("please enter person name")
+        } else if (inputField.email == "") {
+            setError("please enter email name")
+        } else if (inputField.contact == "") {
+            setError("please enter contact")
+        } else if (inputField.message == "") {
+            setError("please enter message")
+        } else {
+            setError("")
+            sendMail(inputField.email)
+        }
+
+        console.log(inputField)
+        
+    }
+
+
+    const sendMail = (email_id) => {
+        var notif;
+        if (email_id == "") {
+            // setnotification("Please Enter The Email")
+            // setpaymentNoti(true)
+            return false
+        }
+
+        console.log(email_id)
+        var myHeader = new Headers();
+        myHeader.append("Content-Type", "application/json")
+        var raw = JSON.stringify({
+            mailId: email_id
+        });
+        var requestOptions = {
+            method: "post",
+            headers: myHeader,
+            body: raw
+        }
+        fetch(`http://localhost:9000/masters/GetDemo/sendEmail2`, requestOptions)
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+                if (result.status == 200) {
+                    setnotification("Request has been sent successfully.")
+                    setpaymentNoti(true)
+                    setemail("")
+                } else {
+                    setnotification("! Error,Please Check Your EmailId")
+                    setpaymentNoti(true)
+                    setemail("")
+                }
+             
+
+            })
+
+    }
+
     return (
 
         <section>
+              <Modal
+                size="lg"
+                show={paymentNoti}
+                onHide={() => setpaymentNoti(false)}
+                aria-labelledby="example-modal-sizes-title-lg"
+                centered
+            >
+                <Modal.Body className="success text-center">
+                    <img style={{ height: "80px", width: "80px" }} src={Ico12} />
+                </Modal.Body>
+
+                <Modal.Body className="success text-center text-danger bold h3">{notification}</Modal.Body>
+                <Modal.Body className="success text-center text-black bold" ><p style={{ cursor: 'pointer',color:"black" }} onClick={() => setpaymentNoti(false)} >Ok</p></Modal.Body>
+
+            </Modal>
 
             <div className="section">
                 <div>
@@ -27,9 +130,7 @@ export default function Contact() {
                     <div className="contact-full-wrapper">
 
                         <section className="wrapper-1-contact">
-                            {/* <div>
-                    <img src={ContactImg} />
-                </div> */}
+
                             <div className="contact-img">
                                 <FadeInFullLeft>
                                     <img src={ContactImg} align="middle" />
@@ -37,16 +138,7 @@ export default function Contact() {
 
 
                             </div>
-                            {/* <div className="contact-title-conatiner3">
-                        <h4> 
-                        Contact Us
-                        </h4>
-                        <div className="line">
-                            
-                        </div>
-                        
 
-                        </div> */}
                             <div>
 
                             </div>
@@ -102,28 +194,33 @@ export default function Contact() {
                             <div className="form-div">
                                 <FadeInUp>
                                     <form>
-                                        <div>
+                                        <div style={{overflow:"hidden"}}>
+                                           
                                             <h4>Get In Touch</h4>
                                             <p>Have an inquiry or some feedback for us? <br /> Fill out the form below to contact our team.</p>
+                                           
+                                            {Error ? (
+                                                <FadeInText>
+                                                    <div className='text-center ' style={{ textTransform: "capitalize" }}>{Error ? Error : ""}</div>
+                                                </FadeInText>
+                                            ) : null}
                                             <div className="input-text-div">
 
                                                 <div>
-                                                    <input type="text" placeholder="Company Name" />
-                                                    <input type="text" placeholder="Contact Person" />
+                                                    <input type="text" placeholder="Company Name" name="company" onChange={handleChangeInput} />
+                                                    <input type="text" placeholder="Contact Person" name="person" onChange={handleChangeInput} />
                                                 </div>
                                                 <div>
-                                                    <input type="text" placeholder="E-mail" />
-                                                    <input type="text" placeholder="Contact No." />
+                                                    <input type="text" placeholder="E-mail" name="email" onChange={handleChangeInput} />
+                                                    <input type="number" placeholder="Contact No." name="contact" onChange={handleChangeInput} />
                                                 </div>
                                                 <div>
-                                                    <textarea placeholder="Message" ></textarea>
+                                                    <textarea placeholder="Message" name="message" onChange={handleChangeInput} ></textarea>
                                                 </div>
                                             </div>
-                                            {/* <div>
-                                    <button>Submit</button>
-                                </div> */}
+
                                             <div className="contact-btn--container">
-                                                <button>Submit</button>
+                                                <button onClick={handleSubmit}>Submit</button>
                                             </div>
 
                                         </div>

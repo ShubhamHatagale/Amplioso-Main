@@ -20,6 +20,8 @@ import { Link } from 'react-router-dom';
 import { FadeInDown, FadeInText, FadeInUp, FadeInImg, FadeInUpBtn, FadeInRight, FadeInLeft, FadeInUpImg, FadeInFullLeft } from './Animation.js'
 import { gsap } from 'gsap';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import Modal from "react-bootstrap/Modal";
+import Ico12 from '../src/img/ico12.png'
 
 export default function Pricing() {
 
@@ -71,8 +73,10 @@ export default function Pricing() {
     ])
 
     const [packages, setPackages] = useState();
-    const [PackageId, setPackageId] = useState([]);
+    const [PackageId, setPackageId] = useState();
 
+    const [paymentNoti, setpaymentNoti] = useState(false);
+    const [notification, setnotification] = useState("");
 
 
     useEffect(() => {
@@ -86,29 +90,21 @@ export default function Pricing() {
     const radioFn = (e) => {
         var id = e.target.value;
         console.log(JSON.stringify(e.target.value))
-        // setPackageId(id)
-
-        console.log("yes")
-        var myHeaders = new Headers();
-        var requestOptions = {
-            method: 'GET',
-            headers: myHeaders,
-            redirect: 'follow'
-        }
-        fetch(`http://localhost:9000/masters/package/${id}`, requestOptions)
-            .then(res => res.json())
-            .then(result => {
-                console.log(result.data)
-                setPackageId(result.data)
-            })
-
+        setPackageId(id)
     }
 
     const submitToNext = () => {
         console.log(PackageId)
+        if (!PackageId) {
+            // alert("Please Select One Package")
+            setnotification("Please Select Any One Package")
+            setpaymentNoti(true)
+
+            return false
+        }
         history.push({
             pathname: '/Purchase_Form',
-            state: PackageId
+            state: { locationData: PackageId },
         })
     }
 
@@ -137,6 +133,23 @@ export default function Pricing() {
         <>
             {packages ? (
                 <section>
+
+                    <Modal
+                        size="lg"
+                        show={paymentNoti}
+                        onHide={() => setpaymentNoti(false)}
+                        aria-labelledby="example-modal-sizes-title-md"
+                        centered
+                    >
+                        <Modal.Body className="success text-center mt-5">
+                            {/* <img style={{ height: "80px", width: "80px" }} src={Ico12} /> */}
+                            <FaIcons.FaTimesCircle style={{ height: "60px", width: "60px" }} />
+                        </Modal.Body>
+
+                        <Modal.Body className="success text-center text-danger bold h3">{notification}</Modal.Body>
+                        <Modal.Body className="success text-center text-black bold" ><p style={{ cursor: 'pointer' }} onClick={() => setpaymentNoti(false)} >Ok</p></Modal.Body>
+
+                    </Modal>
 
                     <div className="section">
                         <div>
@@ -228,6 +241,7 @@ export default function Pricing() {
 
 
 
+                                                    <button className='purchase_button' onClick={submitToNext}>Purchase</button>
 
                                                 </div>
 
@@ -241,7 +255,7 @@ export default function Pricing() {
                                                         }}
 
                                                     > */}
-                                                    <button className='purchase_button' onClick={submitToNext}>Purchase</button>
+                                                    {/* <button className='purchase_button' onClick={submitToNext}>Purchase</button> */}
                                                     {/* </Link> */}
 
                                                 </div>

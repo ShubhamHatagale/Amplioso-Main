@@ -53,7 +53,7 @@ export default function Home() {
             .then(result => {
                 console.log(result)
                 if (result.status == 200) {
-                    setnotification("Request Sent Successfully")
+                    setnotification("Request has been sent successfully.")
                     setpaymentNoti(true)
                     setemail("")
                 } else {
@@ -62,7 +62,7 @@ export default function Home() {
                     setemail("")
                 }
                 // if (result.massage != undefined) {
-                //     setnotification("Request Sent Successfully")
+                //     setnotification("Request has been sent successfully.")
                 //     setpaymentNoti(true)
                 //     setemail("")
 
@@ -79,7 +79,7 @@ export default function Home() {
                 //     setpaymentNoti(true)
 
                 // }else{
-                //     setnotification("Request Sent Successfully")
+                //     setnotification("Request has been sent successfully.")
                 //     setpaymentNoti(true)
                 //     setemail("")
                 // }

@@ -6,18 +6,37 @@ import axios from 'axios';
 import '../../src/assets/css/form-steps.css'
 function PurchaseForm() {
     const location = useLocation();
-    const locationData = useLocation().state.Data;
+    const locationData = useLocation().state.locationData;
     const history = useHistory();
     let employee_count = location.state.employees;
     const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiYnVpbGRpbmdhbXBsaW9zb0BnbWFpbC5jb20iLCJ1c2VySWQiOjE0fSwiaWF0IjoxNjU3NzA4MDkyLCJleHAiOjE2NTgwMDgwOTJ9.qMjxshrJJnlVVur0r_kos8g5_Do0TVMrhK_aXi6eZfI`
-    // const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiYnVpbGRpbmdhbXBsaW9zb0BnbWFpbC5jb20iLCJ1c2VySWQiOjE0fSwiaWF0IjoxNjU0NTA1Mjc0LCJleHAiOjE2NTQ4MDUyNzR9.xvGtdcB96-91ZDlNOHA5smNmyXuaXiBSCZtQjkBXpZw`;
     // var randomstring_password = Math.random().toString(36).slice(-8);
+    const [packageData, setpackageData] = useState([]);
 
+
+
+    const getpackageData = (id) => {
+        var myHeaders = new Headers();
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        }
+        fetch(`http://localhost:9000/masters/package/${id}`, requestOptions)
+            .then(res => res.json())
+            .then(result => {
+                console.log(result.data)
+                setpackageData(result.data)
+            })
+
+    }
     useEffect(() => {
-        console.log(locationData.id)
+        console.log(locationData)
+        // console.log(locationData[0].id)
+        getpackageData(locationData)
+        // console.log(location)
         console.log(token)
         // console.log(randomstring_password+"pass")
-
     }, [])
 
     const [SignUpFormData, setSignUpFormData] = useState({
@@ -32,11 +51,13 @@ function PurchaseForm() {
         feedback_frequency: '1',
         average_employee_compansation: '2',
         current_package: locationData.id,
+        current_package: '3',
         username: '',
         password: 'abc',
         created_by: '1',
         updated_by: '1',
     })
+    
     const [Error, setError] = useState('')
 
     const handleChangeInput = (e) => {
@@ -70,11 +91,9 @@ function PurchaseForm() {
         // setSignUpFormData("")
         console.log(SignUpFormData)
         // alert(SignUpFormData.first_name == "")
+       
         if (SignUpFormData.first_name == "" && SignUpFormData.last_name == "" && SignUpFormData.company_name == "" && SignUpFormData.username == "") {
             setError("please fill all fields")
-            // setTimeout(() => {
-            //     setError("")
-            // }, 5000);
         } else if (SignUpFormData.first_name == "") {
             setError("please enter first name")
         } else if (SignUpFormData.last_name == "") {
@@ -86,6 +105,7 @@ function PurchaseForm() {
         } else {
             setError("")
         }
+        
         // setError("")
         // setSignUpFormData({
         //     ...SignUpFormData, ["first_name"]: "", ["last_name"]: "", ["company_name"]: "", ["username"]: ""
@@ -166,7 +186,7 @@ function PurchaseForm() {
                 console.log(response.data.response_id)
                 history.push({
                     pathname: '/Payment_Page',
-                    state: { locationData: locationData, response_id: response.data.response_id },
+                    state: { locationData: packageData[0], response_id: locationData.id },
 
                 })
 
@@ -181,9 +201,11 @@ function PurchaseForm() {
             });
 
     }
+
+
     return (
         <section>
-            
+
             <div className="section wrapper-2-pricing">
                 <div>
                     <div className="contact-full-wrapper mt-5 ">
@@ -191,7 +213,7 @@ function PurchaseForm() {
                             <div className="form-div row align-items-center " style={{ marginTop: "15%" }}>
                                 <FadeInUp>
                                     <form >
-                                        <div >
+                                        <div className='purchase_form_div'>
                                             {Error ? (
                                                 <FadeInText>
                                                     <div className='text-center p-5' style={{ textTransform: "capitalize" }}>{Error ? Error : ""}</div>
@@ -212,16 +234,11 @@ function PurchaseForm() {
                                                     <input type="text" placeholder="Company Name" name='company_name' value={SignUpFormData.company_name} onChange={handleChangeInput} />
                                                     <input type="text" placeholder="Email-id" name='username' value={SignUpFormData.username} onChange={handleChangeInput} />
                                                 </div>
-                                                {/* <div > 
-                                                    <input type="number" placeholder="Contact No." name='comapany_headquaters' onChange={handleChangeInput} />
-                                                </div> */}
-                                                {/* <div>
-                                                    <textarea placeholder="Message" ></textarea>
-                                                </div> */}
+
                                             </div>
 
-                                            <div className="contact-btn--container">
-                                                <button className='h-50 mt-3' onClick={handleSubmit}>Submit</button>
+                                            <div className="purchase-btn--container">
+                                                <button className='h-50 mt-3 text-center w-50' onClick={handleSubmit}>Submit</button>
                                             </div>
 
 
@@ -234,7 +251,7 @@ function PurchaseForm() {
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
 

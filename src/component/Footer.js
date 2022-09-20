@@ -24,6 +24,7 @@ export default function Footer() {
         var raw = JSON.stringify({
             mailId: email
         });
+
         var requestOptions = {
             method: "post",
             headers: myHeader,
@@ -35,7 +36,7 @@ export default function Footer() {
                 console.log(result.message)
 
                 if (result.status == 200) {
-                        setnotification("Request Sent Successfully")
+                        setnotification("Request has been sent successfully.")
                         setpaymentNoti(true)
                         setemail("")
                 }else{
@@ -45,7 +46,7 @@ export default function Footer() {
                 }
 
                 // if (result.massage != undefined) {
-                //     setnotification("Request Sent Successfully")
+                //     setnotification("Request has been sent successfully.")
                 //     setpaymentNoti(true)
                 //     setemail("")
                 // } else {
@@ -64,14 +65,10 @@ export default function Footer() {
                 onHide={() => setpaymentNoti(false)}
                 aria-labelledby="example-modal-sizes-title-lg"
                 centered
-            // aria-labelledby="contained-modal-title-vcenter"
-
-            // style={{position:"relative",bottom:"5px"}}
             >
                 <Modal.Body className="success text-center">
                     <img style={{ height: "80px", width: "80px" }} src={Ico12} />
                 </Modal.Body>
-                {/* <Modal.Body className="success text-center">{`Payment Successfull`}</Modal.Body> */}
 
                 <Modal.Body className="success text-center text-danger bold h3">{notification}</Modal.Body>
                 <Modal.Body className="success text-center text-black bold" ><p style={{ cursor: 'pointer' }} onClick={() => setpaymentNoti(false)} >Ok</p></Modal.Body>
@@ -87,7 +84,7 @@ export default function Footer() {
                     </p>
                 </div>
                 <div className="center-grid">
-                    <p>Links</p>
+                    <p style={{marginLeft:"32px"}}>Links</p>
                     <ul>
                         <li><Link to='/about'>About us </Link></li>
                         <li><Link to='/pricing'>Pricing</Link></li>
@@ -96,7 +93,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="center-grid">
-                    <p>Legal</p>
+                    <p style={{marginLeft:"32px"}}>Legal</p>
                     <ul>
                         <li><Link to='/terms'>Terms of Services</Link></li>
                         <li><Link to='/policy'>Privacy Policy</Link></li>

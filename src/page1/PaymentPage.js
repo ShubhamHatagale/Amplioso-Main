@@ -11,12 +11,15 @@ const PaymentPage = () => {
     let location = useLocation();
     const [paymentNoti, setpaymentNoti] = useState(false);
     const [notification, setnotification] = useState(" ");
-    let updId = location.state.response_id;
+    let updId = location.state.locationData.id;
     let history = useHistory()
     // let package_data = location.state.locationData
     const pay = (e) => {
         e.preventDefault();
         console.log("j")
+        // console.log(location)
+
+        console.log(updId)
 
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");

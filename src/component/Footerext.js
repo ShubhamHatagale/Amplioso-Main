@@ -15,7 +15,7 @@ export default function Footerext() {
                     </p>
                 </div>
                 <div className="center-grid">
-                    <p>Links</p>
+                    <p style={{marginLeft:"32px"}}>Links</p>
                     <ul>
                         <li><Link to='/about'>About us </Link></li>
                         <li><Link to='/pricing'>Pricing</Link></li>
@@ -24,7 +24,7 @@ export default function Footerext() {
                     </ul>
                 </div>
                 <div className="center-grid">
-                    <p>Legal</p>
+                    <p style={{marginLeft:"32px"}}>Legal</p>
                     <ul>
                     <li><Link to='/terms'>Terms of Services</Link></li>
                         <li><Link to='/policy'>Privacy Policy</Link></li>
