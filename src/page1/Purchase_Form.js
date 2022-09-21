@@ -22,7 +22,7 @@ function PurchaseForm() {
             headers: myHeaders,
             redirect: 'follow'
         }
-        fetch(`http://localhost:9000/masters/package/${id}`, requestOptions)
+        fetch(`http://208.109.14.182:9000/masters/package/${id}`, requestOptions)
             .then(res => res.json())
             .then(result => {
                 console.log(result.data)
@@ -72,7 +72,7 @@ function PurchaseForm() {
         myHeaders.append('Content-Type', 'multipart/form-data')
         myHeaders.append("Authorization", token);
         let res = await fetch(
-            `http://localhost:9000/masters/masters/employee`,
+            `http://208.109.14.182:9000/masters/masters/employee`,
             {
                 method: "get",
                 headers: myHeaders
@@ -151,7 +151,7 @@ function PurchaseForm() {
 
         var config = {
             method: 'POST',
-            url: `http://localhost:9000/masters/companyAmpliosoNew`,
+            url: `http://208.109.14.182:9000/masters/companyAmpliosoNew`,
             headers: {
                 // 'Authorization': token,
                 'Content-Type': 'multipart/form-data'

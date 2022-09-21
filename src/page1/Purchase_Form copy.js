@@ -122,7 +122,7 @@ function Purchase_Form() {
 
         var config = {
             method: 'post',
-            url: `http://localhost:9000/masters/companyAmpliosoNew`,
+            url: `http://208.109.14.182:9000/masters/companyAmpliosoNew`,
             headers: {
                 'Authorization': token,
                 'Content-Type': 'multipart/form-data'

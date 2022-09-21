@@ -86,7 +86,7 @@ export default function Contact() {
             headers: myHeader,
             body: raw
         }
-        fetch(`http://localhost:9000/masters/GetDemo/sendEmail2`, requestOptions)
+        fetch(`http://208.109.14.182:9000/masters/GetDemo/sendEmail2`, requestOptions)
             .then(res => res.json())
             .then(result => {
                 console.log(result)
