@@ -12,7 +12,7 @@ export default function Footer() {
     const [paymentNoti, setpaymentNoti] = useState(false);
     const [notification, setnotification] = useState(" ");
     const sendMail = () => {
-        alert("h")
+        // alert("h")
         if (email == "") {
             // setnotification("Please Enter The Email")
             // setpaymentNoti(true)

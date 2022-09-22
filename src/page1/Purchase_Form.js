@@ -4,6 +4,7 @@ import { FadeInText, FadeInUp, FadeInUpBtn } from '../Animation';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import '../../src/assets/css/form-steps.css'
+// import '/home/shubham/buildFolders'
 function PurchaseForm() {
     const location = useLocation();
     const locationData = useLocation().state.locationData;

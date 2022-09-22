@@ -219,7 +219,7 @@ export default function Home() {
                                         <img src={Wedo1} />
 
                                         <FadeInLeft>
-                                            <div className="wedo-text">
+                                            <div className="wedo-text ">
                                                 <p>
                                                     At Amplioso, we`ve perfected the art and science of ready-to-launch
                                                     performance surveys for your teams.

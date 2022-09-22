@@ -38,10 +38,10 @@ export default function Testominals() {
                     showDots={false}
                     infinite={true}
                     autoPlay={true}
-                    autoPlaySpeed={4000}
+                    autoPlaySpeed={1000}
                     keyBoardControl={true}
                     customTransition="transform 1000ms ease-in-out"
-                    transitionDuration={2000}
+                    transitionDuration={1000}
                     containerClass="carousel-container"
                     removeArrowOnDeviceType={["tablet", "mobile","desktop"]}
                    
