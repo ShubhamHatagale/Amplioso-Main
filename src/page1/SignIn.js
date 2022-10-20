@@ -35,97 +35,10 @@ const SignIn = () => {
         // console.log(values);
         seterror("")
         console.log(Master)
-        // return false;
-        if (Master == true) {
-            console.log("master")
-            try {
-                fetch(BaseURL
-                    , {
-                        method: "post",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                            username: values.email,
-                            password: values.password,
-                        }),
-                    })
-                    .then((res) => {
-                        return res.json();
-                    })
-                    .then((resData) => {
-                        console.log(resData)
-                        console.log(resData.code)
-                        if (resData.status === 200) {
-                            localStorage.setItem("masters_jwt", resData.resultSet.token)
-                            localStorage.setItem("masters_id", resData.resultSet.userId)
-                            localStorage.setItem("company", JSON.stringify(resData.resultSet))
-                            // dispatch({ type: "MANAGER", payload: resData.resultSet })
-                            // Redirect("http://localhost:3002/")
-                            // history.push("/master_admin/");
-                            window.location.assign('http://dev.amplioso.com/master_admin/');
-                        }
-                        console.log(resData.code == 204)
-                        if (resData.code == 204) {
-                            seterror(resData.message)
-                        }
 
-                        // if (resData.code === 204) {
-                        //     fetch(BaseManagerURL
-                        //         , {
-                        //             method: "post",
-                        //             headers: {
-                        //                 "Content-Type": "application/json",
-                        //             },
-                        //             body: JSON.stringify({
-                        //                 username: values.email,
-                        //                 password: values.password,
-                        //             }),
-                        //         })
-                        //         .then((res) => {
-                        //             return res.json();
-                        //         })
-                        //         .then((resData) => {
-                        //             console.log(resData)
-                        //             if (resData.status === 200) {
-                        //                 localStorage.setItem("manager_jwt", resData.resultSet.token)
-                        //                 localStorage.setItem("manager_id", resData.resultSet.managerId)
-                        //                 localStorage.setItem("companyId", resData.resultSet.companyId)
-                        //                 localStorage.setItem("manager", JSON.stringify(resData.resultSet))
-                        //                 // dispatch({ type: "MANAGER", payload: resData.resultSet })
-                        //                 // Redirect("http://localhost:3003/")
-                        //                 // history.push("/manager/");
-                        //                 window.location.assign('http://dev.amplioso.com/manager/');
-                        //                 // M.toast({
-                        //                 //     html: "login Successful",
-                        //                 //     classes: "#e#00e676 green accent-3",
-                        //                 // });
-                        //             }
-                        //             if (resData.code === 204) {
-                        //                 // M.toast({
-                        //                 //     html: "Email Or Password does not match",
-                        //                 //     classes: "#FF0000 red accent-3",
-                        //                 // });
-                        //             }
-                        //             props.resetForm();
-                        //         })
-                        //         .catch((err) => {
-                        //             console.log(err);
-                        //         });
-                        // }
-                        props.resetForm();
-                    })
-                    .catch((err) => {
-                        console.log(err);
-                    });
-            } catch (err) {
-                console.log(err);
-            }
-            props.resetForm()
-        } else {
-            console.log("manager")
 
-            fetch(BaseManagerURL
+        try {
+            fetch(BaseURL
                 , {
                     method: "post",
                     headers: {
@@ -141,35 +54,164 @@ const SignIn = () => {
                 })
                 .then((resData) => {
                     console.log(resData)
+                    console.log(resData.code)
                     if (resData.status === 200) {
-                        localStorage.setItem("manager_jwt", resData.resultSet.token)
-                        localStorage.setItem("manager_id", resData.resultSet.managerId)
-                        localStorage.setItem("companyId", resData.resultSet.companyId)
-                        localStorage.setItem("manager", JSON.stringify(resData.resultSet))
+                        localStorage.setItem("masters_jwt", resData.resultSet.token)
+                        localStorage.setItem("masters_id", resData.resultSet.userId)
+                        localStorage.setItem("company", JSON.stringify(resData.resultSet))
                         // dispatch({ type: "MANAGER", payload: resData.resultSet })
-                        // Redirect("http://localhost:3003/")
-                        // history.push("/manager/");
-                        window.location.assign('http://dev.amplioso.com/manager/');
-                        // M.toast({
-                        //     html: "login Successful",
-                        //     classes: "#e#00e676 green accent-3",
-                        // });
+                        // Redirect("http://localhost:3002/")
+                        // history.push("/master_admin/");
+                        window.location.assign('http://dev.amplioso.com/master_admin/');
                     }
+                    console.log(resData.code == 204)
                     if (resData.code == 204) {
-                        seterror(resData.message)
+                        // seterror(resData.message)
+
+                        fetch(BaseManagerURL
+                            , {
+                                method: "post",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify({
+                                    username: values.email,
+                                    password: values.password,
+                                }),
+                            })
+                            .then((res) => {
+                                return res.json();
+                            })
+                            .then((resData) => {
+                                console.log(resData)
+                                if (resData.status === 200) {
+                                    localStorage.setItem("manager_jwt", resData.resultSet.token)
+                                    localStorage.setItem("manager_id", resData.resultSet.managerId)
+                                    localStorage.setItem("companyId", resData.resultSet.companyId)
+                                    localStorage.setItem("manager", JSON.stringify(resData.resultSet))
+                                    // dispatch({ type: "MANAGER", payload: resData.resultSet })
+                                    // Redirect("http://localhost:3003/")
+                                    // history.push("/manager/");
+                                    window.location.assign('http://dev.amplioso.com/manager/');
+                                    // M.toast({
+                                    //     html: "login Successful",
+                                    //     classes: "#e#00e676 green accent-3",
+                                    // });
+                                }
+                                if (resData.code == 204) {
+                                    seterror(resData.message)
+                                }
+                                props.resetForm();
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+
+
                     }
                     props.resetForm();
                 })
                 .catch((err) => {
                     console.log(err);
                 });
+        } catch (err) {
+            console.log(err);
         }
+        props.resetForm()
+
+
+        // return false;
+        // if (Master == true) {
+        //     console.log("master")
+        //     try {
+        //         fetch(BaseURL
+        //             , {
+        //                 method: "post",
+        //                 headers: {
+        //                     "Content-Type": "application/json",
+        //                 },
+        //                 body: JSON.stringify({
+        //                     username: values.email,
+        //                     password: values.password,
+        //                 }),
+        //             })
+        //             .then((res) => {
+        //                 return res.json();
+        //             })
+        //             .then((resData) => {
+        //                 console.log(resData)
+        //                 console.log(resData.code)
+        //                 if (resData.status === 200) {
+        //                     localStorage.setItem("masters_jwt", resData.resultSet.token)
+        //                     localStorage.setItem("masters_id", resData.resultSet.userId)
+        //                     localStorage.setItem("company", JSON.stringify(resData.resultSet))
+        //                     // dispatch({ type: "MANAGER", payload: resData.resultSet })
+        //                     // Redirect("http://localhost:3002/")
+        //                     // history.push("/master_admin/");
+        //                     window.location.assign('http://dev.amplioso.com/master_admin/');
+        //                 }
+        //                 console.log(resData.code == 204)
+        //                 if (resData.code == 204) {
+        //                     seterror(resData.message)
+        //                 }
+        //                 props.resetForm();
+        //             })
+        //             .catch((err) => {
+        //                 console.log(err);
+        //             });
+        //     } catch (err) {
+        //         console.log(err);
+        //     }
+        //     props.resetForm()
+        // } else {
+        //     console.log("manager")
+
+        //     fetch(BaseManagerURL
+        //         , {
+        //             method: "post",
+        //             headers: {
+        //                 "Content-Type": "application/json",
+        //             },
+        //             body: JSON.stringify({
+        //                 username: values.email,
+        //                 password: values.password,
+        //             }),
+        //         })
+        //         .then((res) => {
+        //             return res.json();
+        //         })
+        //         .then((resData) => {
+        //             console.log(resData)
+        //             if (resData.status === 200) {
+        //                 localStorage.setItem("manager_jwt", resData.resultSet.token)
+        //                 localStorage.setItem("manager_id", resData.resultSet.managerId)
+        //                 localStorage.setItem("companyId", resData.resultSet.companyId)
+        //                 localStorage.setItem("manager", JSON.stringify(resData.resultSet))
+        //                 // dispatch({ type: "MANAGER", payload: resData.resultSet })
+        //                 // Redirect("http://localhost:3003/")
+        //                 // history.push("/manager/");
+        //                 window.location.assign('http://dev.amplioso.com/manager/');
+        //                 // M.toast({
+        //                 //     html: "login Successful",
+        //                 //     classes: "#e#00e676 green accent-3",
+        //                 // });
+        //             }
+        //             if (resData.code == 204) {
+        //                 seterror(resData.message)
+        //             }
+        //             props.resetForm();
+        //         })
+        //         .catch((err) => {
+        //             console.log(err);
+        //         });
+        // }
 
     }
     return (
         <>
+            <div style={{ background: 'rgb(46 62 106)', overflow: 'hidden', height: '100vh' }}>
 
-            <div style={{ background: '#A61A26', overflow: 'hidden', height: '100vh' }}>
+            {/* <div style={{ background: 'rgb(43, 57, 97)', overflow: 'hidden', height: '100vh' }}> */}
                 {/* <div className="text-center login-logo"><a href="/">
                 <img src={white_logo} alt border={0} className="img-responsive" />
             </a>
@@ -183,7 +225,7 @@ const SignIn = () => {
                         {/* <div className='card-header text-center'><b>Ampliso Login</b></div> */}
                         <div className='card-header  '>
                             {/* <img src={white_logo} alt border={0} className="img-responsive" style={{ height: "50px" }} /> */}
-                            <div className='text-center' style={{ fontSize: "20px" }}><b>{Master ? "Master" : "Manager"} Login</b></div>
+                            <div className='text-center' style={{ fontSize: "20px" }}><b>Manager Or Master Admin Login</b></div>
                         </div>
 
 
@@ -268,12 +310,12 @@ const SignIn = () => {
 
 
                         <div class="row text-center" style={{ marginLeft: "0rem", fontWeight: "bold", color: "#B31C29" }}>
-                            <span onClick={
+                            {/* <span onClick={
                                 () => {
                                     setMaster(!Master)
                                     seterror("")
                                 }
-                            } style={{ cursor: "pointer" }} >{Master ? "Manager" : "Master Admin"} Login Here</span>
+                            } style={{ cursor: "pointer" }} >{Master ? "Manager" : "Master Admin"} Login Here</span> */}
                             <Link to="#" >Forgot Password</Link>
 
                         </div>

@@ -157,7 +157,7 @@ export default function Contact() {
                                             </div>
                                         </li> */}
 
-                                        <li>
+                                        {/* <li>
                                             <div className="contact-svg-container">
                                                 <FaIcons.FaPhone />
                                             </div>
@@ -170,7 +170,7 @@ export default function Contact() {
                                                     Phone : +145 (03) 456 0000 <br /> Support : +145 (03) 456 0000
                                                 </span>
                                             </div>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <div className="contact-svg-container">
                                                 <FaIcons.FaEnvelopeOpen />

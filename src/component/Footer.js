@@ -97,7 +97,7 @@ export default function Footer() {
                     <ul>
                         <li><Link to='/terms'>Terms of Services</Link></li>
                         <li><Link to='/policy'>Privacy Policy</Link></li>
-                        <li><Link to='/faq'>FAQ`s</Link></li>
+                        <li><Link to='/faq'>FAQ</Link></li>
                     </ul>
                 </div>
                 <div className="center-grid">
