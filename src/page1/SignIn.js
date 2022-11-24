@@ -62,7 +62,7 @@ const SignIn = () => {
                         // dispatch({ type: "MANAGER", payload: resData.resultSet })
                         // Redirect("http://localhost:3002/")
                         // history.push("/master_admin/");
-                        window.location.assign('http://dev.amplioso.com/master_admin/');
+                        window.location.assign('http://dev.amplioso.com/master_admin/password_setting');
                     }
                     console.log(resData.code == 204)
                     if (resData.code == 204) {
@@ -209,7 +209,8 @@ const SignIn = () => {
     }
     return (
         <>
-            <div style={{ background: 'rgb(46 62 106)', overflow: 'hidden', height: '100vh' }}>
+            {/* <div style={{ background: 'rgb(46 62 106)', overflow: 'hidden', height: '100vh' }}> */}
+            <div style={{ background: 'gray', overflow: 'hidden', height: '100vh' }}>
 
             {/* <div style={{ background: 'rgb(43, 57, 97)', overflow: 'hidden', height: '100vh' }}> */}
                 {/* <div className="text-center login-logo"><a href="/">

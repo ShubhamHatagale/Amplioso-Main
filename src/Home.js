@@ -258,7 +258,7 @@ export default function Home() {
                                                         <div className="linebg"></div>
                                                     </div>
                                                 </div>
-                                                <p>
+                                                <p className='text-dark'>
                                                     A proprietary framework of performance 'metrics that matter' for managers and individual contributors.
                                                 </p>
 
@@ -275,7 +275,7 @@ export default function Home() {
                                                         <div className="linebg"></div>
                                                     </div>
                                                 </div>
-                                                <p>
+                                                <p className='text-dark'>
                                                     Launch ready-to-go surveys and collect actionable performance results for all your teams in minutes.
                                                 </p>
                                             </div>
@@ -291,7 +291,7 @@ export default function Home() {
                                                         <div className="linebg"></div>
                                                     </div>
                                                 </div>
-                                                <p>
+                                                <p className='text-dark'>
                                                     Raise the bar with our approch that enables people analytics with rich internal and external benchmarking insights.
                                                 </p>
                                             </div>

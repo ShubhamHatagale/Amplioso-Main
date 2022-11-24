@@ -51,8 +51,8 @@ function PurchaseForm() {
         business_sector: '2',
         feedback_frequency: '1',
         average_employee_compansation: '2',
-        current_package: locationData.id,
-        current_package: '3',
+        // current_package: locationData.id,
+        current_package: locationData,
         username: '',
         password: 'abc',
         created_by: '1',
@@ -71,7 +71,7 @@ function PurchaseForm() {
     const getData = async () => {
         var myHeaders = new Headers();
         myHeaders.append('Content-Type', 'multipart/form-data')
-        myHeaders.append("Authorization", token);
+        // myHeaders.append("Authorization", token);
         let res = await fetch(
             `http://208.109.14.182:9000/masters/masters/employee`,
             {

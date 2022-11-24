@@ -17,24 +17,24 @@ export default function Blog() {
 
    const blogDetails = [
       {
-         image: img1,
-         descreption: "To command is to serve, nothing more and nothing less. —Andre Malraux",
+         image: "https://www.mckinsey.com/~/media/mckinsey/business%20functions/people%20and%20organizational%20performance/our%20insights/back%20to%20human%20why%20hr%20leaders%20want%20to%20focus%20on%20people%20again/back-to-human-hero-1536x864.jpg?mw=1536&car=72:35&cq=50",
+         descreption: "‘Back to human’: Why HR leaders want to focus on people again",
          url: "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/back-to-human-why-hr-leaders-want-to-focus-on-people-again"
       },
       {
-         image: img2,
-         descreption: "Outstanding leaders go out of their way to boost the self-esteem of their personnel. If people believe in themselves, it's amazing what they can accomplish. —Sam Walton",
+         image: "https://static01.nyt.com/images/2020/05/21/reader-center/21burst-to-do-list/21burst-to-do-list-blog480-v2.gif",
+         descreption: "How to Make the Most of Your Workday",
          url: "https://www.nytimes.com/guides/business/how-to-improve-your-productivity-at-work"
       },
       {
-         image: img3,
-         descreption: "As we look ahead into the next century, leaders will be those who empower others. —Bill Gates",
+         image: "https://www.workhuman.com/wp-content/uploads/2022/08/EmployeeTurnover_674x354.png",
+         descreption: "How to Reduce Employee Turnover in 2022: 12 Strategies that Work",
          url: "https://www.workhuman.com/blog/12-surefire-tips-to-reduce-employee-turnover/"
       },
       {
-         image: img4,
-         descreption: "Leadership is about making others better as a result of your presence, and making sure that impact lasts in your absence.” —Sheryl Sandberg",
-         url: "https://www.kornferry.com/insights/this-week-in-leadership/the-great-resignation-big-regret"
+         image: Test1,
+         descreption: "https://hbr.org/2015/11/what-amazing-bosses-do-differently",
+         url: "https://hbr.org/2015/11/what-amazing-bosses-do-differently"
       }
 
    ]

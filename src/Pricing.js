@@ -195,7 +195,7 @@ export default function Pricing() {
                                             <div className="over-flow-price">
                                                 <FadeInUpBtn>
                                                     <h4>Features and Annual Pricing</h4>
-                                                    <p>An investment in talent should be the easiest investment to make for any CFO</p>
+                                                    <p style={{color:"black"}}>An investment in talent should be the easiest investment to make for any CFO</p>
                                                 </FadeInUpBtn>
 
                                                 <div className="pricing-boxes">
@@ -204,7 +204,7 @@ export default function Pricing() {
                                                             <FadeInUp>
                                                                 <div className="price-box">
                                                                     <div>
-                                                                        <p>{item.package_name}</p>
+                                                                        <p style={{color:"black"}}>{item.package_name}</p>
                                                                         <span>{`employee`}</span>
                                                                     </div>
                                                                     <div>
@@ -277,7 +277,7 @@ export default function Pricing() {
                                                         <div className="benifits-box">
                                                             <div>
                                                                 <img src={Ico4} />
-                                                                <p>Access to our proprietary performance evaluation framework</p>
+                                                                <p style={{color:"black"}}>Access to our proprietary performance evaluation framework</p>
                                                             </div>
 
 
@@ -288,7 +288,7 @@ export default function Pricing() {
                                                         <div className="benifits-box">
                                                             <div>
                                                                 <img src={Ico5} />
-                                                                <p>Access to our intuitive admin and manager set up portals</p>
+                                                                <p style={{color:"black"}}>Access to our intuitive admin and manager set up portals</p>
                                                             </div>
 
 
@@ -298,7 +298,7 @@ export default function Pricing() {
                                                         <div className="benifits-box">
                                                             <div>
                                                                 <img src={Ico6} />
-                                                                <p>Ability to launch surveys to targeted teams and individuals with ease</p>
+                                                                <p style={{color:"black"}}>Ability to launch surveys to targeted teams and individuals with ease</p>
                                                             </div>
 
 
@@ -308,7 +308,7 @@ export default function Pricing() {
                                                         <div className="benifits-box">
                                                             <div>
                                                                 <img src={Ico7} />
-                                                                <p>Access to all your talent insights in one portal</p>
+                                                                <p style={{color:"black"}}>Access to all your talent insights in one portal</p>
                                                             </div>
 
 
@@ -318,7 +318,7 @@ export default function Pricing() {
                                                         <div className="benifits-box">
                                                             <div>
                                                                 <img src={Ico8} />
-                                                                <p>Access to internal and external talent benchmarking</p>
+                                                                <p style={{color:"black"}}>Access to internal and external talent benchmarking</p>
                                                             </div>
 
 
@@ -328,7 +328,7 @@ export default function Pricing() {
                                                         <div className="benifits-box">
                                                             <div>
                                                                 <img src={Ico9} />
-                                                                <p>Access to our world-class reporting platform and PDF summary reports</p>
+                                                                <p style={{color:"black"}}>Access to our world-class reporting platform and PDF summary reports</p>
                                                             </div>
 
 
