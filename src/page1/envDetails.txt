@@ -8,7 +8,7 @@ PORT=9000
 GMAIL_USER=conversantravikantm@gmail.com
 GMAIL_PASS=21conversant#ravikant
 
-http://208.109.14.182:5000/masters/company
+http://localhost:5000/masters/company
 
 Gateway env-
 SECRETE=qweqweqwe

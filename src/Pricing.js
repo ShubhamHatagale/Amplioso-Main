@@ -117,7 +117,7 @@ export default function Pricing() {
             headers: myHeaders,
             redirect: 'follow'
         }
-        fetch(`http://208.109.14.182:9000/masters/package`, requestOptions)
+        fetch(`http://localhost:9000/masters/package`, requestOptions)
             .then(res => res.json())
             .then(result => {
                 console.log(result.data)
@@ -140,6 +140,7 @@ export default function Pricing() {
                         onHide={() => setpaymentNoti(false)}
                         aria-labelledby="example-modal-sizes-title-md"
                         centered
+                        
                     >
                         <Modal.Body className="success text-center mt-5">
                             {/* <img style={{ height: "80px", width: "80px" }} src={Ico12} /> */}
@@ -241,7 +242,7 @@ export default function Pricing() {
 
 
 
-                                                    <button className='purchase_button' onClick={submitToNext}>Purchase</button>
+                                                    <button className='purchase_button' onClick={submitToNext}>Buy Now</button>
 
                                                 </div>
 

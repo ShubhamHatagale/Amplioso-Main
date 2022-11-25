@@ -11,7 +11,7 @@ const PaymentPage = () => {
     let location = useLocation();
     const [paymentNoti, setpaymentNoti] = useState(false);
     const [notification, setnotification] = useState(" ");
-    let updId = location.state.locationData.id;
+    let updId = location.state.response_id;
     let history = useHistory()
     // let package_data = location.state.locationData
     const pay = (e) => {
@@ -20,6 +20,8 @@ const PaymentPage = () => {
         // console.log(location)
 
         console.log(updId)
+        // setnotification("Payement Sucessfull")
+        // setpaymentNoti(true)
 
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -28,7 +30,7 @@ const PaymentPage = () => {
             headers: myHeaders,
             redirect: "follow"
         }
-        fetch(`http://208.109.14.182:9000/masters/paymt_sts/${updId}`, requestOptions)
+        fetch(`http://localhost:9000/masters/paymt_sts/${updId}`, requestOptions)
             .then((response) => response.json())
             .then((resData) => {
                 console.log(resData);
