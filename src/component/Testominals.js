@@ -88,7 +88,7 @@ export default function Testominals() {
 
                     <div className="testominals-container">
                         <img src={Test5} />
-                        <h5>Bill Gates</h5>
+                        <h5>Bill Gates</h5> 
                         <p style={{ color: "black" }}>
                             " As we look ahead into the next century, leaders will be those who empower others. "
                         </p>

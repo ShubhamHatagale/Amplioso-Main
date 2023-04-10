@@ -33,22 +33,22 @@ const SignIn = () => {
 
     const OnSubmitForm = (values, props) => {
         // console.log(values);
+        // alert("s")
         seterror("")
         console.log(Master)
-
+        console.log(BaseURL)
 
         try {
-            fetch(BaseURL
-                , {
-                    method: "post",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        username: values.email,
-                        password: values.password,
-                    }),
-                })
+            fetch('http://localhost:5001/login', {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username: values.email,
+                    password: values.password,
+                }),
+            })
                 .then((res) => {
                     return res.json();
                 })
@@ -62,6 +62,7 @@ const SignIn = () => {
                         // dispatch({ type: "MANAGER", payload: resData.resultSet })
                         // Redirect("http://localhost:3002/")
                         // history.push("/master_admin/");
+                        alert("Loginned To Master")
                         window.location.assign('http://dev.amplioso.com/master_admin/company_profile');
                     }
                     console.log(resData.code == 204)
@@ -97,6 +98,8 @@ const SignIn = () => {
                                     //     html: "login Successful",
                                     //     classes: "#e#00e676 green accent-3",
                                     // });
+                                    alert("Loginned To Manager")
+
                                 }
                                 if (resData.code == 204) {
                                     seterror(resData.message)
@@ -212,7 +215,7 @@ const SignIn = () => {
             {/* <div style={{ background: 'rgb(46 62 106)', overflow: 'hidden', height: '100vh' }}> */}
             <div style={{ background: 'gray', overflow: 'hidden', height: '100vh' }}>
 
-            {/* <div style={{ background: 'rgb(43, 57, 97)', overflow: 'hidden', height: '100vh' }}> */}
+                {/* <div style={{ background: 'rgb(43, 57, 97)', overflow: 'hidden', height: '100vh' }}> */}
                 {/* <div className="text-center login-logo"><a href="/">
                 <img src={white_logo} alt border={0} className="img-responsive" />
             </a>

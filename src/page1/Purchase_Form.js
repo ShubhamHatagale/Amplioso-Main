@@ -134,12 +134,12 @@ function PurchaseForm() {
         formdata.append('company_name', SignUpFormData.company_name);
         formdata.append('first_name', SignUpFormData.first_name);
         formdata.append('last_name', SignUpFormData.last_name);
-        formdata.append('comapany_headquaters', SignUpFormData.comapany_headquaters);
-        formdata.append('date_of_inception', SignUpFormData.date_of_inception);
-        formdata.append('number_of_employee', SignUpFormData.number_of_employee);
-        formdata.append('business_sector', SignUpFormData.business_sector);
-        formdata.append('feedback_frequency', SignUpFormData.feedback_frequency);
-        formdata.append('average_employee_compansation', SignUpFormData.average_employee_compansation);
+        // formdata.append('comapany_headquaters', SignUpFormData.comapany_headquaters);
+        // formdata.append('date_of_inception', SignUpFormData.date_of_inception);
+        // formdata.append('number_of_employee', SignUpFormData.number_of_employee);
+        // formdata.append('business_sector', SignUpFormData.business_sector);
+        // formdata.append('feedback_frequency', SignUpFormData.feedback_frequency);
+        // formdata.append('average_employee_compansation', SignUpFormData.average_employee_compansation);
         formdata.append('current_package', SignUpFormData.current_package);
         formdata.append('username', SignUpFormData.username);
         formdata.append('password', SignUpFormData.password);
@@ -158,7 +158,7 @@ function PurchaseForm() {
                 'Content-Type': 'multipart/form-data'
             },
 
-            data: formdata
+            data: formdata 
         };
         console.log(config);
 
