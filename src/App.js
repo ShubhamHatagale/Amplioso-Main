@@ -20,7 +20,7 @@ import SignIn from './page1/SignIn';
 import ThankYou from './page1/ThankYou';
 
 function App() {
-
+//updated
 
   // useEffect(() => {
   //   console.log = function () { }
